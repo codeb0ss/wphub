@@ -1,236 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WordPress Exploit Website</title>
-  <style>
-    body {
-      background-color: black;
-      color: green;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-      margin-top: 5rem;
-    }
-    p {
-      font-size: 1.5rem;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .matrix {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      background-color: black;
-      overflow: hidden;
-      z-index: -1;
-    }
-    .matrix__stream {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      z-index: -1;
-    }
-    .matrix__stream__character {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-      opacity: 0.5;
-      animation: matrix__stream__character__animation 5s linear infinite;
-    }
-    @keyframes matrix__stream__character__animation {
-      0% {
-        transform: translateY(-100%);
-        opacity: 0.5;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100%);
-        opacity: 0.5;
-      }
-    }
-  </style>
+	<title>Hacker Theme Wordpress Exploit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+			background-color: #000;
+			color: #fff;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			color: #0f0;
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			margin-top: 50px;
+			text-align: center;
+		}
+		.btn {
+			background-color: #f00;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 18px;
+			margin-top: 20px;
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+		.btn:hover {
+			background-color: #0f0;
+			color: #000;
+		}
+		.footer {
+			background-color: #000;
+			bottom: 0;
+			color: #fff;
+			font-size: 14px;
+			left: 0;
+			padding: 10px;
+			position: fixed;
+			right: 0;
+			text-align: center;
+		}
+		.footer a {
+			color: #0f0;
+			text-decoration: none;
+		}
+	</style>
 </head>
 <body>
-  <div class="matrix">
-    <div class="matrix__stream">
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span>
-      <span class="matrix__stream__character">1</span>
-      <span class="matrix__stream__character">0</span
+	<div class="container">
+		<h1>Hacker Theme Wordpress Exploit</h1>
+		<h3>By Aesthetic Hackers</h3>
+		<p>This is a Wordpress exploit with aesthetic hacker themes. Use it at your own risk.</p>
+		<button class="btn">Exploit Now</button>
+	</div>
+	<div class="footer">
+		<p>Created by <a href="https://aesthetichackers.com">Aesthetic Hackers</a></p>
+	</div>
+</body>
+</html>
