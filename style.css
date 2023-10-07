@@ -1,14 +1,12 @@
-/* style.css */
-
 body {
+  background-color: #1a1a1a;
+  color: #fff;
   font-family: Arial, sans-serif;
-  margin: 0;
 }
 
 header {
   background-color: #333;
-  color: #fff;
-  padding: 1rem;
+  padding: 20px;
 }
 
 nav ul {
@@ -19,7 +17,7 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 20px;
 }
 
 nav a {
@@ -27,21 +25,55 @@ nav a {
   text-decoration: none;
 }
 
-main {
-  margin: 2rem;
+nav a:hover {
+  text-decoration: underline;
 }
 
-section {
-  margin-bottom: 2rem;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.exploits {
+  padding: 50px;
+}
+
+.exploits h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.exploits ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.exploits li {
+  margin-bottom: 10px;
+}
+
+.exploits a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.exploits a:hover {
+  text-decoration: underline;
 }
